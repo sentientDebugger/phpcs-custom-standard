@@ -69,7 +69,7 @@ class DisallowSpacesAroundObjectOperatorSniff implements Sniff
 			if ($prevNonWhitespace === false || $tokens[$prevNonWhitespace]['line'] !== $tokens[$stackPtr]['line']) {
 				return;
 			}
-			$this->processWhitespaceLeft($phpcsFile, $tokens, $stackPtr - 1);
+			$this->processWhitespaceLeft($phpcsFile, $stackPtr - 1);
 		}
 	}
 
